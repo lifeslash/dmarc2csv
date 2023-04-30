@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feedback>
+    <report_metadata>
+        <org_name>hoge.company</org_name>
+        <email>mail@hoge.com</email>
+        <extra_contact_info>https://hoge.com</extra_contact_info>
+        <report_id>1111122222</report_id>
+        <date_range>
+            <begin>1682642367</begin>
+            <end>1682815167</end>
+        </date_range>
+    </report_metadata>
+    <policy_published>
+        <domain>hoge.com</domain>
+        <adkim>r</adkim>
+        <aspf>r</aspf>
+        <p>reject</p>
+        <sp>quarantine</sp>
+        <pct>100</pct>
+    </policy_published>
+    <record>
+        <row>
+            <source_ip>192.168.13.1</source_ip>
+            <count>1</count>
+            <policy_evaluated>
+                <disposition>pass</disposition>
+                <dkim>fail</dkim>
+                <spf>pass</spf>
+            </policy_evaluated>
+        </row>
+        <identifier>
+            <header_from>hoge.com</header_from>
+        </identifier>
+        <auth_results>
+            <dkim>
+                <domain>fuga.com</domain>
+                <selector>selector1</selector>
+                <result>pass</result>
+            </dkim>
+            <spf>
+                <domain>hoge.com</domain>
+                <result>pass</result>
+            </spf>
+        </auth_results>
+    </record>
+</feedback>
